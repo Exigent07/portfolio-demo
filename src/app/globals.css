@@ -1,0 +1,101 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Orbitron:wght@400..900&family=Saira+Stencil+One&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --background-color: #0D1117;
+  --foreground-color: #EAEAEA;
+  --highlight-color: #2C3E50;
+  --accent-color: #C9D1D9;
+  --primary-color: #5D8AA6;
+  --secondary-color: #8B949E;
+
+  /* Fonts */
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-subheading: 'Space Grotesk', sans-serif;
+  --font-body: 'Ubuntu', sans-serif;
+  --font-load-1: 'Orbitron', sans-serif;
+  --font-load-2: 'Saira Stencil One', sans-serif;
+  --font-load-3: 'Great Vibes', cursive;
+}
+
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+*::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* Apply background and global text styles */
+body {
+  font-family: var(--font-body);
+  color: var(--foreground-color);
+  background: var(--background-color);
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-subheading);
+  color: var(--accent-color);
+}
+
+/* Paragraphs and body text */
+p {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--foreground-color);
+}
+
+/* Links */
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Custom */
+.commented {
+  color: var(--secondary-color) !important;
+}
